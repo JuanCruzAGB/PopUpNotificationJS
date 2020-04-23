@@ -8,8 +8,10 @@ class PopUpNotificationJS{
      * @memberof PopUpNotificationJS
      */
     constructor(parent){
-        this.makeHTML();
-        parent.appendChild(this.html);
+        if(!this.html){
+            this.makeHTML();
+            parent.appendChild(this.html);
+        }
     }
     /**
      * Make the PopUpNotificationJS HTML Element.
